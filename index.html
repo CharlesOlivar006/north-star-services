@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="description"
+    content="Northstar Home Services offers dependable home maintenance, cleaning, and repair services with clear, upfront estimates."
+  />
+  <meta name="theme-color" content="#173d32" />
+
+  <title>Northstar Home Services | Care for Your Home</title>
+
+  <!-- Tailwind CSS: convenient for this portfolio prototype -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Custom fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Your custom CSS -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Tailwind theme settings -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            forest: "#173d32",
+            sage: "#dfe8d9",
+            cream: "#f8f7f2",
+            accent: "#c6a76b"
+          },
+          fontFamily: {
+            sans: ["DM Sans", "sans-serif"],
+            display: ["Playfair Display", "serif"]
+          }
+        }
+      }
+    };
+  </script>
+
+  <!-- Your JavaScript -->
+  <script src="script.js" defer></script>
+</head>
+
+<body class="bg-cream text-forest font-sans antialiased">
+
+  <!-- Announcement bar -->
+  <div class="bg-forest px-4 py-2 text-center text-xs tracking-wide text-white sm:text-sm">
+    Thoughtful home care. Clear estimates. No unnecessary surprises.
+  </div>
+
+  <!-- Navigation -->
+  <header class="sticky top-0 z-50 border-b border-black/5 bg-cream/95 backdrop-blur-md">
+    <nav
+      class="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 lg:px-8"
+      aria-label="Main navigation"
+    >
+      <a href="#home" class="flex items-center gap-3" aria-label="Northstar Home Services home">
+        <span class="flex h-11 w-11 items-center justify-center rounded-full bg-forest text-xl text-white">
+          ✳
+        </span>
+        <span>
+          <span class="block font-display text-lg font-bold leading-tight sm:text-xl">
+            Northstar
+          </span>
+          <span class="block text-[10px] uppercase tracking-[0.22em] text-gray-600">
+            Home Services
+          </span>
+        </span>
+      </a>
+
+      <div id="nav-menu" class="nav-menu">
+        <a href="#services" class="nav-link">Services</a>
+        <a href="#about" class="nav-link">Our approach</a>
+        <a href="#service-area" class="nav-link">Service area</a>
+        <a href="#faq" class="nav-link">FAQs</a>
+        <a href="#estimate" class="mobile-cta">Get an estimate</a>
+      </div>
+
+      <a
+        href="#estimate"
+        class="hidden rounded-full bg-forest px-5 py-3 text-sm font-semibold text-white transition hover:bg-[#245545] md:inline-flex"
+      >
+        Get an estimate <span class="ml-2" aria-hidden="true">↗</span>
+      </a>
+
+      <button
+        id="menu-toggle"
+        class="flex h-11 w-11 items-center justify-center rounded-full border border-forest/20 text-xl md:hidden"
+        type="button"
+        aria-label="Open navigation menu"
+        aria-expanded="false"
+        aria-controls="nav-menu"
+      >
+        ☰
+      </button>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- Hero section -->
+    <section id="home" class="hero-section">
+      <div class="mx-auto grid max-w-7xl items-center gap-12 px-5 py-16 md:py-24 lg:grid-cols-2 lg:px-8 lg:py-28">
+
+        <div class="reveal">
+          <div class="mb-6 inline-flex items-center gap-2 rounded-full border border-forest/15 bg-white/70 px-4 py-2 text-xs font-semibold uppercase tracking-[0.14em]">
+            <span class="h-2 w-2 rounded-full bg-[#a18b58]"></span>
+            Home care, made simpler
+          </div>
+
+          <h1 class="max-w-2xl font-display text-5xl font-semibold leading-[1.08] tracking-tight sm:text-6xl lg:text-7xl">
+            A better home
+            <span class="italic text-[#7d8e6c]">starts</span>
+            with the right care.
+          </h1>
+
+          <p class="mt-6 max-w-xl text-base leading-8 text-gray-600 sm:text-lg">
+            From everyday upkeep to those little repairs you've been putting off,
+            get dependable home services designed around your space and schedule.
+          </p>
+
+          <div class="mt-8 flex flex-col gap-3 sm:flex-row">
+            <a
+              href="#estimate"
+              class="inline-flex items-center justify-center rounded-full bg-forest px-7 py-4 font-semibold text-white transition hover:-translate-y-1 hover:bg-[#245545]"
+            >
+              Build your estimate <span class="ml-3" aria-hidden="true">↗</span>
+            </a>
+
+            <a
+              href="#services"
+              class="inline-flex items-center justify-center rounded-full border border-forest/20 px-7 py-4 font-semibold transition hover:bg-white"
+            >
+              Explore our services
+            </a>
+          </div>
+
+          <div class="mt-10 flex flex-wrap gap-x-7 gap-y-3 text-sm text-gray-600">
+            <span><span class="mr-2 text-forest">✓</span>Clear estimates</span>
+            <span><span class="mr-2 text-forest">✓</span>Flexible scheduling</span>
+            <span><span class="mr-2 text-forest">✓</span>Careful attention</span>
+          </div>
+        </div>
+
+        <div class="hero-visual reveal">
+          <img
+            src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1200&q=85"
+            alt="Warm, thoughtfully designed modern living room"
+            class="hero-image"
+          />
+
+          <div class="hero-note">
+            <span class="mb-2 block text-xs uppercase tracking-[0.18em] text-gray-500">
+              A little more peace of mind
+            </span>
+            <span class="block font-display text-2xl">Your home, in good hands.</span>
+            <span class="mt-2 block text-sm leading-6 text-gray-600">
+              Thoughtful details make all the difference.
+            </span>
+          </div>
+
+          <div class="hero-stamp" aria-hidden="true">
+            <span>CARE</span>
+            <span class="text-xl">✳</span>
+            <span>MATTERS</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Introductory value strip -->
+    <section class="border-y border-forest/10 bg-white">
+      <div class="mx-auto grid max-w-7xl gap-6 px-5 py-8 sm:grid-cols-3 lg:px-8">
+        <div class="flex items-start gap-4">
+          <span class="value-icon">01</span>
+          <div>
+            <h2 class="font-semibold">Know what to expect</h2>
+            <p class="mt-1 text-sm leading-6 text-gray-600">
+              Understand your estimate before moving forward.
+            </p>
+          </div>
+        </div>
+
+        <div class="flex items-start gap-4">
+          <span class="value-icon">02</span>
+          <div>
+            <h2 class="font-semibold">Care for the details</h2>
+            <p class="mt-1 text-sm leading-6 text-gray-600">
+              A thoughtful approach to every corner of your home.
+            </p>
+          </div>
+        </div>
+
+        <div class="flex items-start gap-4">
+          <span class="value-icon">03</span>
+          <div>
+            <h2 class="font-semibold">Make life easier</h2>
+            <p class="mt-1 text-sm leading-6 text-gray-600">
+              Simple service options for everyday home needs.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="section-padding">
+      <div class="mx-auto max-w-7xl px-5 lg:px-8">
+        <div class="section-heading reveal">
+          <p class="eyebrow">What we can help with</p>
+          <h2 class="section-title">
+            Good care for the place<br class="hidden sm:block" /> you call home.
+          </h2>
+          <p class="section-description">
+            Choose a service that fits your needs. Each option is designed to make
+            looking after your space a little less stressful.
+          </p>
+        </div>
+
+        <div class="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+
+          <article class="service-card reveal">
+            <div class="service-image-wrap">
+              <img
+                src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=700&q=80"
+                alt="Cleaning supplies prepared for home cleaning"
+                loading="lazy"
+              />
+              <span class="service-number">01</span>
+            </div>
+            <div class="p-6">
+              <h3 class="font-display text-2xl">Home Cleaning</h3>
+              <p class="mt-3 text-sm leading-7 text-gray-600">
+                Refresh your living spaces with routine or deep-cleaning services.
+              </p>
+              <button class="service-select" data-service="cleaning" type="button">
+                Estimate this service <span aria-hidden="true">↗</span>
+              </button>
+            </div>
+          </article>
+
+          <article class="service-card reveal">
+            <div class="service-image-wrap">
+              <img
+                src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=700&q=80"
+                alt="Professional working on a home repair"
+                loading="lazy"
+              />
+              <span class="service-number">02</span>
+            </div>
+            <div class="p-6">
+              <h3 class="font-display text-2xl">Minor Repairs</h3>
+              <p class="mt-3 text-sm leading-7 text-gray-600">
+                Take care of small fixes, adjustments, and household maintenance.
+              </p>
+              <button class="service-select" data-service="repairs" type="button">
+                Estimate this service <span aria-hidden="true">↗</span>
+              </button>
+            </div>
+          </article>
+
+          <article class="service-card reveal">
+            <div class="service-image-wrap">
+              <img
+                src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=700&q=80"
+                alt="Neatly arranged modern home interior"
+                loading="lazy"
+              />
+              <span class="service-number">03</span>
+            </div>
+            <div class="p-6">
+              <h3 class="font-display text-2xl">Home Upkeep</h3>
+              <p class="mt-3 text-sm leading-7 text-gray-600">
+                Keep everyday home maintenance tasks organized and manageable.
+              </p>
+              <button class="service-select" data-service="maintenance" type="button">
+                Estimate this service <span aria-hidden="true">↗</span>
+              </button>
+            </div>
+          </article>
+
+          <article class="service-card reveal">
+            <div class="service-image-wrap">
+              <img
+                src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=700&q=80"
+                alt="Bright, welcoming home interior"
+                loading="lazy"
+              />
+              <span class="service-number">04</span>
+            </div>
+            <div class="p-6">
+              <h3 class="font-display text-2xl">Move-in Refresh</h3>
+              <p class="mt-3 text-sm leading-7 text-gray-600">
+                Get your space ready for a fresh start, move, or new chapter.
+              </p>
+              <button class="service-select" data-service="movein" type="button">
+                Estimate this service <span aria-hidden="true">↗</span>
+              </button>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- About / approach -->
+    <section id="about" class="bg-sage/60 section-padding">
+      <div class="mx-auto grid max-w-7xl items-center gap-12 px-5 lg:grid-cols-2 lg:px-8">
+        <div class="about-image reveal">
+          <img
+            src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1100&q=85"
+            alt="Comfortable, carefully maintained living space"
+            loading="lazy"
+          />
+          <div class="about-caption">
+            <span class="font-display text-3xl">Care in every detail.</span>
+          </div>
+        </div>
+
+        <div class="reveal">
+          <p class="eyebrow">A more thoughtful approach</p>
+          <h2 class="section-title">
+            Home care should feel simple, not complicated.
+          </h2>
+          <p class="mt-6 leading-8 text-gray-600">
+            Your home is personal. The way it is cared for should be, too.
+            Northstar is built around straightforward options, clear communication,
+            and a process that helps you understand what comes next.
+          </p>
+
+          <div class="mt-8 space-y-6">
+            <div class="flex gap-4">
+              <span class="approach-icon">✓</span>
+              <div>
+                <h3 class="font-semibold">Start with your needs</h3>
+                <p class="mt-1 text-sm leading-7 text-gray-600">
+                  Choose the service and property size that best match your situation.
+                </p>
+              </div>
+            </div>
+
+            <div class="flex gap-4">
+              <span class="approach-icon">✓</span>
+              <div>
+                <h3 class="font-semibold">Review the estimate</h3>
+                <p class="mt-1 text-sm leading-7 text-gray-600">
+                  See an illustrative estimate before requesting a follow-up.
+                </p>
+              </div>
+            </div>
+
+            <div class="flex gap-4">
+              <span class="approach-icon">✓</span>
+              <div>
+                <h3 class="font-semibold">Plan the next step</h3>
+                <p class="mt-1 text-sm leading-7 text-gray-600">
+                  Use the contact form to demonstrate how a booking inquiry could work.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <a href="#estimate" class="inline-flex items-center rounded-full bg-forest px-6 py-4 font-semibold text-white transition hover:bg-[#245545] mt-8">
+            Find your estimate <span class="ml-3" aria-hidden="true">↗</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quote calculator -->
+    <section id="estimate" class="section-padding">
+      <div class="mx-auto max-w-7xl px-5 lg:px-8">
+        <div class="grid overflow-hidden rounded-[2rem] bg-forest text-white lg:grid-cols-[1.1fr_0.9fr]">
+
+          <div class="p-7 sm:p-10 lg:p-14">
+            <p class="eyebrow eyebrow-light">A useful place to start</p>
+            <h2 class="font-display text-4xl leading-tight sm:text-5xl">
+              Get a feel for the cost.
+            </h2>
+            <p class="mt-5 max-w-lg leading-7 text-white/70">
+              Select a service and property size to calculate a sample estimate.
+              These example prices are for this portfolio demo only.
+            </p>
+
+            <form id="estimate-form" class="mt-9 space-y-6">
+              <div>
+                <label for="service-type" class="form-label">What do you need?</label>
+                <select id="service-type" class="form-control" required>
+                  <option value="cleaning">Home cleaning</option>
+                  <option value="repairs">Minor repairs</option>
+                  <option value="maintenance">Home upkeep</option>
+                  <option value="movein">Move-in refresh</option>
+                </select>
+              </div>
+
+              <div>
+                <label for="property-size" class="form-label">Property size</label>
+                <select id="property-size" class="form-control" required>
+                  <option value="small">Small home / apartment</option>
+                  <option value="medium" selected>Medium home</option>
+                  <option value="large">Large home</option>
+                </select>
+              </div>
+
+              <div>
+                <label for="frequency" class="form-label">Service frequency</label>
+                <select id="frequency" class="form-control" required>
+                  <option value="once">One-time service</option>
+                  <option value="monthly">Monthly service (sample discount)</option>
+                </select>
+              </div>
+
+              <button
+                type="submit"
+                class="w-full rounded-full bg-[#d7c59e] px-6 py-4 font-bold text-forest transition hover:bg-white"
+              >
+                Calculate my estimate ↗
+              </button>
+            </form>
+          </div>
+
+          <div class="estimate-panel flex flex-col justify-center p-7 sm:p-10 lg:p-14">
+            <span class="text-xs font-semibold uppercase tracking-[0.2em] text-forest/60">
+              Your sample estimate
+            </span>
+
+            <p id="estimate-price" class="mt-4 font-display text-5xl font-semibold text-forest sm:text-6xl" aria-live="polite">
+              $180–$240
+            </p>
+
+            <p id="estimate-description" class="mt-4 max-w-sm leading-7 text-gray-600">
+              A sample estimate for a medium home cleaning service.
+            </p>
+
+            <div class="my-8 h-px bg-forest/15"></div>
+
+            <div class="space-y-4 text-sm">
+              <div class="flex items-center justify-between gap-4">
+                <span class="text-gray-600">Selected service</span>
+                <strong id="summary-service" class="text-right text-forest">Home cleaning</strong>
+              </div>
+              <div class="flex items-center justify-between gap-4">
+                <span class="text-gray-600">Property size</span>
+                <strong id="summary-size" class="text-right text-forest">Medium home</strong>
+              </div>
+              <div class="flex items-center justify-between gap-4">
+                <span class="text-gray-600">Frequency</span>
+                <strong id="summary-frequency" class="text-right text-forest">One-time</strong>
+              </div>
+            </div>
+
+            <p class="mt-8 rounded-xl border border-forest/10 bg-white/70 p-4 text-xs leading-6 text-gray-600">
+              Demo disclaimer: prices are illustrative, not real business quotes.
+              No service is being sold or booked through this portfolio project.
+            </p>
+
+            <a href="#contact" class="mt-6 inline-flex items-center font-semibold text-forest underline underline-offset-4">
+              Continue to inquiry form <span class="ml-2" aria-hidden="true">↗</span>
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Service area -->
+    <section id="service-area" class="border-y border-forest/10 bg-white section-padding">
+      <div class="mx-auto grid max-w-7xl items-center gap-10 px-5 lg:grid-cols-2 lg:px-8">
+        <div class="reveal">
+          <p class="eyebrow">Local by design</p>
+          <h2 class="section-title">Care that starts close to home.</h2>
+          <p class="mt-5 max-w-xl leading-8 text-gray-600">
+            A service business needs a clear way to explain where it works.
+            This example service-area section can be customized for a real client's
+            towns, neighborhoods, or coverage map.
+          </p>
+
+          <ul class="mt-7 grid grid-cols-2 gap-3 text-sm">
+            <li class="area-item">✳ North District</li>
+            <li class="area-item">✳ Riverside</li>
+            <li class="area-item">✳ Oakwood</li>
+            <li class="area-item">✳ Westfield</li>
+          </ul>
+
+          <p class="mt-5 text-xs leading-6 text-gray-500">
+            These locations are fictional examples for the demo website.
+          </p>
+        </div>
+
+        <div class="service-map reveal" role="img" aria-label="Illustrative service area graphic showing four sample neighborhoods">
+          <div class="map-ring ring-one"></div>
+          <div class="map-ring ring-two"></div>
+          <div class="map-ring ring-three"></div>
+          <div class="map-center">
+            <span class="text-3xl">✳</span>
+            <span class="mt-2 text-xs font-bold uppercase tracking-widest">Northstar</span>
+            <span class="mt-1 text-[10px] text-white/65">Service hub</span>
+          </div>
+          <span class="map-pin pin-one">North District</span>
+          <span class="map-pin pin-two">Riverside</span>
+          <span class="map-pin pin-three">Oakwood</span>
+          <span class="map-pin pin-four">Westfield</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQs -->
+    <section id="faq" class="section-padding">
+      <div class="mx-auto max-w-3xl px-5">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Good to know</p>
+          <h2 class="section-title">A few common questions.</h2>
+        </div>
+
+        <div class="mt-10 space-y-3 reveal">
+          <details class="faq-item">
+            <summary>How does the estimate calculator work?</summary>
+            <p>
+              It uses sample prices and simple multipliers based on your selections.
+              A real business would need to confirm pricing, scope, and any extra fees.
+            </p>
+          </details>
+
+          <details class="faq-item">
+            <summary>Can I request more than one service?</summary>
+            <p>
+              This demo calculates one service at a time. A production version could
+              support multiple selections and a combined estimate.
+            </p>
+          </details>
+
+          <details class="faq-item">
+            <summary>Are the prices and service locations real?</summary>
+            <p>
+              No. Northstar Home Services is a fictional portfolio concept. All prices,
+              neighborhoods, and service descriptions are examples for demonstration.
+            </p>
+          </details>
+
+          <details class="faq-item">
+            <summary>Does the contact form send a booking?</summary>
+            <p>
+              No. The form currently demonstrates front-end validation only. It does
+              not send messages, save information, or create real bookings.
+            </p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact CTA -->
+    <section id="contact" class="pb-20">
+      <div class="mx-auto max-w-7xl px-5 lg:px-8">
+        <div class="contact-banner reveal">
+          <div class="max-w-2xl">
+            <p class="eyebrow eyebrow-light">Your next step</p>
+            <h2 class="font-display text-4xl leading-tight sm:text-5xl">
+              Let's make home care feel easier.
+            </h2>
+            <p class="mt-5 leading-7 text-white/70">
+              Try the inquiry form to see the front-end interaction in action.
+              This demo will not send your information to a real business.
+            </p>
+          </div>
+
+          <form id="contact-form" class="contact-form">
+            <div>
+              <label for="customer-name" class="form-label">Your name</label>
+              <input
+                id="customer-name"
+                name="name"
+                type="text"
+                class="form-control"
+                placeholder="Enter your name"
+                autocomplete="name"
+                required
+                minlength="2"
+              />
+            </div>
+
+            <div>
+              <label for="customer-email" class="form-label">Email address</label>
+              <input
+                id="customer-email"
+                name="email"
+                type="email"
+                class="form-control"
+                placeholder="you@example.com"
+                autocomplete="email"
+                required
+              />
+            </div>
+
+            <div>
+              <label for="customer-message" class="form-label">How can we help?</label>
+              <textarea
+                id="customer-message"
+                name="message"
+                class="form-control"
+                rows="3"
+                placeholder="Tell us a little about your project"
+                required
+                minlength="10"
+              ></textarea>
+            </div>
+
+            <button
+              type="submit"
+              class="w-full rounded-full bg-[#d7c59e] px-6 py-4 font-bold text-forest transition hover:bg-white"
+            >
+              Preview inquiry ↗
+            </button>
+
+            <p id="form-message" class="text-sm leading-6 text-white/80" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-forest/10 bg-white">
+    <div class="mx-auto flex max-w-7xl flex-col gap-6 px-5 py-8 sm:flex-row sm:items-center sm:justify-between lg:px-8">
+      <a href="#home" class="font-display text-xl font-bold">Northstar<span class="text-[#7d8e6c]">.</span></a>
+
+      <p class="text-sm leading-6 text-gray-500">
+        Fictional business concept built for a front-end development portfolio.
+      </p>
+
+      <a href="#home" class="text-sm font-semibold text-forest hover:underline">
+        Back to top ↑
+      </a>
+    </div>
+  </footer>
+
+</body>
+</html>
